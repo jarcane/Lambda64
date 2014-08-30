@@ -42,6 +42,20 @@ Specifications
 * 16-bit address bus (64Kib max address page)
 * Single 16-byte stack
 * 8-bit cycle timer
-* 40 x 25 (8x8 font) character text mode
-* 320 x 200 graphics mode w/16 colors per pixel
+* 40 x 24 (8x8 font) character text mode
+* 320 x 192 graphics mode w/16 colors per pixel
 * Sound generator TBD
+
+Devplan
+-------
+
+Development is to proceed in stages, implemented in order of dependency.
+
+* Stage 1: Revise the MicroMini core to add a few key instructions, refactor for a more functional style, and replace the CharTerm dependency with something more cross platform, to allow easier testing. These changes will be committed upstream to the original MM code.
+* Stage 2: Lambda64 development will begin by adding necessary extensions to the MM architecture to access additional hardware layers like graphics, storage, and sound
+* Stage 3: Implement graphics layer
+* Stage 4: Implement storage layer
+* Stage 5: Implement sound layer
+* Stage 6: ???
+
+Future development may extend the Lambda64 environment with useful development tools, support for a standard library of ROM routines, Lambda64 targeted and hosted language compilers, and possibly even a Lambda64 "OS". 
